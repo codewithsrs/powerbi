@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../amazon_sale.Dataset"
+    },
+    "byConnection": null
+  }
+}

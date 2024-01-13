@@ -1,0 +1,1247 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"amazon-fashion - YT\",\"Amazon\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.124.1554.0 (23.12)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "amazon.fiter_sales": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Amazon",
+                    "ConceptualProperty": "fiter sales"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Category sales": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "amazon.shipcity": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Amazon",
+                    "ConceptualProperty": "ship-city"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "City": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "amazon.shipstate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Amazon",
+                    "ConceptualProperty": "ship-state"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "State": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "amazon.total": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Amazon",
+                    "ConceptualProperty": "Total"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Total sales": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "e37d40c7-16c3-45da-bf52-31ea2679c4a8",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "ASIN",
+        "fromTable": "Amazon",
+        "toCardinality": "many",
+        "toColumn": "asin",
+        "toTable": "amazon-fashion - YT"
+      },
+      {
+        "name": "20ad3194-e378-4947-8637-e3d447143745",
+        "fromColumn": "Date",
+        "fromTable": "Amazon",
+        "toColumn": "Date",
+        "toTable": "calendar"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "amazon-fashion - YT",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "amazon_prime__y_or_n",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "85a2c938-b333-4b68-84c2-f8c0af21e0d1",
+            "sourceColumn": "amazon_prime__y_or_n",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "asin",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "630749b3-8bf4-4f33-9233-7d7eb42e9876",
+            "sourceColumn": "asin",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "best_seller_tag__y_or_n",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e9aab13a-2fcb-4745-b75d-fc0f5f82eb69",
+            "sourceColumn": "best_seller_tag__y_or_n",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "brand",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ee55a70c-0957-419d-bfb8-90d501cacf96",
+            "sourceColumn": "brand",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "colour",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cce56c82-616b-4c18-8c7d-f5d7cfa673ac",
+            "sourceColumn": "colour",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "delivery_type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4f391764-aee4-4c76-b44c-08728c6efcf0",
+            "sourceColumn": "delivery_type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "discount_percentage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2b58e68e-c5a8-4875-bf58-d6ae0a3cf267",
+            "sourceColumn": "discount_percentage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "large.1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7597650a-655d-4297-a1e5-fe5e66be4eb9",
+            "sourceColumn": "large.1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "large.2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "726140e7-6b15-4247-b074-10dd015833b2",
+            "sourceColumn": "large.2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "large.3",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "10238eca-3d26-45de-89b1-502fdc5f2a58",
+            "sourceColumn": "large.3",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "large.4",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3fb6bf99-a082-4d94-b0a5-d17a5d7c5639",
+            "sourceColumn": "large.4",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "large.5",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f7547783-d11e-4eba-bfa0-81cf30f01996",
+            "sourceColumn": "large.5",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "large.6",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "adfb1b66-45d6-4fb2-b30c-98a01eafd03d",
+            "sourceColumn": "large.6",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "large.7",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "976ae6ee-78f8-4e90-affa-6f35d8c50181",
+            "sourceColumn": "large.7",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "large.8",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b39382d9-fca4-40b8-944c-c058107b5294",
+            "sourceColumn": "large.8",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "large.9",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "86abf123-2a4c-41f6-a451-cfc0e94832a6",
+            "sourceColumn": "large.9",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "left_in_stock",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cfa551eb-0b45-4002-a2ca-e892d6f787cf",
+            "sourceColumn": "left_in_stock",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "no_of_reviews",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "76e6579e-c02f-4eb0-bbfc-7d9881f376bc",
+            "sourceColumn": "no_of_reviews",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0f1621b2-012a-448c-97e9-01f921864057",
+            "sourceColumn": "description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "product_details",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "faed9d1c-26bf-4b50-883e-7fcba5007a58",
+            "sourceColumn": "product_details",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "product_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4ff3c26a-1118-4d98-9c3d-0293cfa51a88",
+            "sourceColumn": "product_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "product_url",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "daec9c91-923b-48b1-803a-37daf8518c10",
+            "sourceColumn": "product_url",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "rating",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "82e1d409-e179-42f0-87b8-45cc882bbfdc",
+            "sourceColumn": "rating",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sales_price",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7be23940-c80d-42a6-ace1-3afb90ac44fa",
+            "sourceColumn": "sales_price",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ed8f7f24-a9e3-4c57-830a-efd25791ef28",
+            "sourceColumn": "seller_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Saller ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0163ad14-9e48-4a53-87f2-95763ed5a423",
+            "sourceColumn": "Saller ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NewCategory",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "23987277-2bf6-4cd5-b0de-c5d2ad13bfa9",
+            "sourceColumn": "NewCategory",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ec6d556c-2f93-49f7-9def-20a7db5bf3a2",
+        "partitions": [
+          {
+            "name": "amazon-fashion - YT",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\smrut\\Downloads\\amazon-fashion - YT.csv\"),[Delimiter=\",\", Columns=25, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"amazon_prime__y_or_n\", type text}, {\"asin\", type text}, {\"best_seller_tag__y_or_n\", type text}, {\"brand\", type text}, {\"colour\", type text}, {\"delivery_type\", type text}, {\"discount_percentage\", Percentage.Type}, {\"large\", type text}, {\"left_in_stock\", Int64.Type}, {\"no_of_reviews\", Int64.Type}, {\"description\", type text}, {\"product_details\", type text}, {\"product_name\", type text}, {\"product_url\", type text}, {\"rating\", type number}, {\"sales_price\", type number}, {\"Category\", type text}, {\"seller_name\", type text}, {\"Saller ID\", type text}, {\"\", type text}, {\"_1\", type text}, {\"_2\", type text}, {\"_3\", type text}, {\"_4\", type text}, {\"_5\", type text}}),",
+                "    #\"Split Column by Delimiter\" = Table.SplitColumn(#\"Changed Type\", \"large\", Splitter.SplitTextByDelimiter(\"|\", QuoteStyle.Csv), {\"large.1\", \"large.2\", \"large.3\", \"large.4\", \"large.5\", \"large.6\", \"large.7\", \"large.8\", \"large.9\"}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Split Column by Delimiter\",{{\"large.1\", type text}, {\"large.2\", type text}, {\"large.3\", type text}, {\"large.4\", type text}, {\"large.5\", type text}, {\"large.6\", type text}, {\"large.7\", type text}, {\"large.8\", type text}, {\"large.9\", type text}}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Changed Type1\",null,\"\",Replacer.ReplaceValue,{\"amazon_prime__y_or_n\", \"asin\", \"best_seller_tag__y_or_n\", \"brand\", \"colour\", \"delivery_type\", \"discount_percentage\", \"large.1\", \"large.2\", \"large.3\", \"large.4\", \"large.5\", \"large.6\", \"large.7\", \"large.8\", \"large.9\", \"left_in_stock\", \"no_of_reviews\", \"description\", \"product_details\", \"product_name\", \"product_url\", \"rating\", \"sales_price\", \"Category\", \"seller_name\", \"Saller ID\", \"\", \"_1\", \"_2\", \"_3\", \"_4\", \"_5\"}),",
+                "    #\"Split Column by Character Transition\" = Table.SplitColumn(#\"Replaced Value\", \"Category\", Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"A\"..\"Z\"}), {\"Category.1\", \"Category.2\", \"Category.3\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Split Column by Character Transition\",null,\"\",Replacer.ReplaceValue,{\"Category.1\", \"Category.2\", \"Category.3\"}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Replaced Value1\", \"NewCategory\", each [Category.1]&\" \"&[Category.2]&\" \"&[Category.3]),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Added Custom\",{\"Category.1\", \"Category.2\", \"Category.3\", \"\", \"_1\", \"_2\", \"_3\", \"_4\", \"_5\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Removed Columns\", each ([large.1] <> \"\"))",
+                "in",
+                "    #\"Filtered Rows\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_724d9f39-35f6-4e69-b0b6-24988d8d3d14",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "82a94083-e94b-41a4-9a2f-937367030e01",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "4e1331d1-0e4f-4f81-ba7e-481a7abd3a55",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "5ee6ed32-4194-4ec8-acb7-9e03df5bd814",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "51a0bccf-d9e3-4074-a5bf-9b62bc970712",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "94c11f59-8405-48f2-a1c1-ea9bc52b1be5",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "a66e0858-65d7-4032-9a65-e0babb92bd95",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "3628cdb8-9916-43f0-9f8d-9575e4a90866",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "6a54ea4c-0d3f-401c-ab03-29028cf4e82b",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "0281c22d-c1d7-4b0f-9896-b9990ec271b8",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "405ac767-f3a7-40ed-9914-f0bbe22393c9",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "f22c75ff-7baf-4689-bac8-f65218298752",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "85d75f31-0af3-4492-befc-c1743abf64a7"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "7efd6af8-5f10-43ca-a9c2-7dee4fc4bb1c",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_724d9f39-35f6-4e69-b0b6-24988d8d3d14",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Amazon",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Order ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e5f7f473-3733-43fa-9508-e28e11dc088b",
+            "sourceColumn": "Order ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "8eefce71-2e9d-44ff-94db-d3608b379924",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7b0de328-3f85-4ff2-abb7-63ee7db3fd25",
+            "sourceColumn": "Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fulfilment",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "27c0805f-11a4-4c96-b48f-a059bd548786",
+            "sourceColumn": "Fulfilment",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sales Channel ",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3c8ea0da-cecf-4a89-8fe1-02b5681b2b67",
+            "sourceColumn": "Sales Channel ",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ship-service-level",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "963bd953-ab7f-4c5e-8ec9-6496a50acc8e",
+            "sourceColumn": "ship-service-level",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Style",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dd77c691-6468-4ff6-be17-c115036d81e3",
+            "sourceColumn": "Style",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SKU",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9148806e-8bab-44bc-86af-e04b76487f1d",
+            "sourceColumn": "SKU",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d3e0065a-1ca6-411f-9c51-1447d3bd47ca",
+            "sourceColumn": "Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Size",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "22994c2e-18ba-41f9-b564-30cf57075a72",
+            "sourceColumn": "Size",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ASIN",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bf1ebb69-268e-42fa-b50c-f5141029fdad",
+            "sourceColumn": "ASIN",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Courier Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0b4a32e8-fd2c-4af4-8462-742c5ed3dc8e",
+            "sourceColumn": "Courier Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Qty",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "64381b37-59e5-466d-b032-a199367a4790",
+            "sourceColumn": "Qty",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "currency",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f349a45f-17ed-417e-b90a-241cd3850891",
+            "sourceColumn": "currency",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ship-city",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "83e05ca5-3f13-4e47-9915-0e3851c2e7ee",
+            "sourceColumn": "ship-city",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ship-state",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7f53bae9-b076-48a0-beae-cc9e8ddba109",
+            "sourceColumn": "ship-state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ship-postal-code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "35b41030-623c-43b8-82e1-50d7f88c425c",
+            "sourceColumn": "ship-postal-code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ship-country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "db17f872-be1f-4079-a6cf-6b6c5ed148cb",
+            "sourceColumn": "ship-country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "fulfilled-by",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a371b232-ecef-446c-bf2c-dfce21dca713",
+            "sourceColumn": "fulfilled-by",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Amount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-IN\"}"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "\"₹\"\\ #,0;#,0\\ -\"₹\";\"₹\"\\ #,0",
+            "lineageTag": "e6d1336f-0a1c-4c00-b3e9-7b885bf8532e",
+            "sourceColumn": "Amount",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total Amount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-IN\"}"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "\"₹\"\\ #,0;#,0\\ -\"₹\";\"₹\"\\ #,0",
+            "lineageTag": "91722213-1931-407c-9dcc-edddd2af0d0a",
+            "sourceColumn": "Total Amount",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "77c3ec33-1e8b-43f5-a555-c08c1f0c9ffd",
+        "measures": [
+          {
+            "name": "sale amount",
+            "expression": "sum(Amazon[Total Amount])",
+            "formatString": "0",
+            "lineageTag": "40240bf9-afc7-4769-a080-df2beb50a56e"
+          },
+          {
+            "name": "sale units",
+            "expression": "sum(Amazon[Qty])",
+            "formatString": "0",
+            "lineageTag": "2eb64650-aff0-43fd-88fe-c3aa86c22749"
+          },
+          {
+            "name": "fiter sales",
+            "expression": [
+              "var _select_value = SELECTEDVALUE(select_value[value])",
+              "return if(_select_value = \"Sales\",[sale amount],[sale units])"
+            ],
+            "formatString": "0",
+            "lineageTag": "decebbde-db18-4561-bb9c-33baed545293"
+          },
+          {
+            "name": "Total",
+            "expression": "CALCULATE([fiter sales],all('amazon-fashion - YT'[NewCategory]))",
+            "formatString": "0",
+            "lineageTag": "741f8344-cd28-4277-93c2-2290b6214ace"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Amazon",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"C:\\Users\\smrut\\Downloads\\Amazon Sale Report - YT.xlsx\"), null, true),",
+                "    Amazon_Sheet = Source{[Item=\"Amazon\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Amazon_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Column1\", type text}, {\"Sales Data\", type any}, {\"Column3\", type text}, {\"Column4\", type text}, {\"Column5\", type text}, {\"Column6\", type text}, {\"Column7\", type text}, {\"Column8\", type text}, {\"Column9\", type text}, {\"Column10\", type text}, {\"Column11\", type text}, {\"Column12\", type text}, {\"Column13\", type any}, {\"Column14\", type text}, {\"Column15\", type text}, {\"Column16\", type text}, {\"Column17\", type any}, {\"Column18\", type text}, {\"Column19\", type text}, {\"Column20\", type any}}),",
+                "    #\"Promoted Headers1\" = Table.PromoteHeaders(#\"Changed Type\", [PromoteAllScalars=true]),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers1\",{{\"Order ID\", type text}, {\"Date\", type date}, {\"Status\", type text}, {\"Fulfilment\", type text}, {\"Sales Channel \", type text}, {\"ship-service-level\", type text}, {\"Style\", type text}, {\"SKU\", type text}, {\"Category\", type text}, {\"Size\", type text}, {\"ASIN\", type text}, {\"Courier Status\", type text}, {\"Qty\", Int64.Type}, {\"currency\", type text}, {\"ship-city\", type text}, {\"ship-state\", type text}, {\"ship-postal-code\", Int64.Type}, {\"ship-country\", type text}, {\"fulfilled-by\", type text}, {\"Column20\", type any}}),",
+                "    #\"Merged Queries\" = Table.NestedJoin(#\"Changed Type1\", {\"ASIN\"}, #\"amazon-fashion - YT\", {\"asin\"}, \"amazon-fashion - YT\", JoinKind.LeftOuter),",
+                "    #\"Expanded amazon-fashion - YT\" = Table.ExpandTableColumn(#\"Merged Queries\", \"amazon-fashion - YT\", {\"sales_price\"}, {\"amazon-fashion - YT.sales_price\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Expanded amazon-fashion - YT\",{{\"amazon-fashion - YT.sales_price\", \"Amount\"}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Renamed Columns\",{\"Column20\"}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Removed Columns\", \"Total Amount\", each [Qty]*[Amount]),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Added Custom\",null,\"\",Replacer.ReplaceValue,{\"Order ID\", \"Date\", \"Status\", \"Fulfilment\", \"Sales Channel \", \"ship-service-level\", \"Style\", \"SKU\", \"Category\", \"Size\", \"ASIN\", \"Courier Status\", \"Qty\", \"currency\", \"ship-city\", \"ship-state\", \"ship-postal-code\", \"ship-country\", \"fulfilled-by\", \"Amount\"}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value\",{{\"Qty\", Int64.Type}, {\"Total Amount\", Int64.Type}, {\"Amount\", Int64.Type}, {\"Date\", type date}})",
+                "in",
+                "    #\"Changed Type2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "select_value",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "1986a7f81f6845ea999f297a1e6a9216"
+          }
+        ],
+        "columns": [
+          {
+            "name": "select",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "1dafd68a-07c6-4b76-9e0c-744c9bf664a0",
+            "sourceColumn": "[select]",
+            "summarizeBy": "sum",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "725d2d60-a8a5-4c7c-ab44-4de1cad4350e",
+            "sourceColumn": "[value]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "57c630c4-c77e-4b0f-b578-009eb7d376b5",
+        "partitions": [
+          {
+            "name": "select_value",
+            "mode": "import",
+            "source": {
+              "expression": "DATATABLE(\"select\",INTEGER,\"value\",STRING,{{1,\"Sales\"},{2,\"Units\"}})",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "calendar",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "ec04a9c0c52c4b209df231c2fafcfa9a"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "fd84a47a-37ea-4618-a872-e642144a9645",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "MONTH('calendar'[Date])",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "a36367ef-2252-4002-b293-ce093a73c8e7",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "YEAR('calendar'[Date])",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "ca22af72-b562-42f2-a934-cc73a19d3756",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "month_year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "format('calendar'[Date],\"mmmmyyyy\")",
+            "isDataTypeInferred": true,
+            "lineageTag": "ba7c2d74-7c5e-497f-be78-2c4e98ef5d5b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "dc3f1219-65e5-412b-98be-caf6c39ea510",
+        "partitions": [
+          {
+            "name": "calendar",
+            "mode": "import",
+            "source": {
+              "expression": "CALENDARAUTO(4)",
+              "type": "calculated"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

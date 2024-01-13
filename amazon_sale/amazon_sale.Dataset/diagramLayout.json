@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 218,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 25
+          },
+          "nodeIndex": "amazon-fashion - YT",
+          "nodeLineageTag": "ec6d556c-2f93-49f7-9def-20a7db5bf3a2",
+          "size": {
+            "height": 262,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 269,
+            "y": 214
+          },
+          "nodeIndex": "Amazon",
+          "nodeLineageTag": "77c3ec33-1e8b-43f5-a555-c08c1f0c9ffd",
+          "size": {
+            "height": 264,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 486,
+            "y": 0
+          },
+          "nodeIndex": "select_value",
+          "nodeLineageTag": "57c630c4-c77e-4b0f-b578-009eb7d376b5",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 742,
+            "y": 0
+          },
+          "nodeIndex": "calendar",
+          "nodeLineageTag": "dc3f1219-65e5-412b-98be-caf6c39ea510",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
