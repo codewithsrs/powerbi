@@ -3,7 +3,7 @@
   "artifacts": [
     {
       "report": {
-        "path": "definition.Report"
+        "path": "AmazonSales.Report"
       }
     }
   ],

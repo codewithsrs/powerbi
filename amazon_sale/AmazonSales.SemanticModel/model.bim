@@ -12,11 +12,11 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.124.1554.0 (23.12)"
+        "value": "2.139.1678.0 (24.12)+2a034ab280bddf891eb7bb9ebfe6996f9c3a3196"
       },
       {
         "name": "PBI_ProTooling",
-        "value": "[\"DevMode\"]"
+        "value": "[\"DaxQueryView_Desktop\",\"DevMode\"]"
       }
     ],
     "culture": "en-US",
@@ -25,13 +25,12 @@
         "name": "en-US",
         "linguisticMetadata": {
           "content": {
-            "DynamicImprovement": "HighConfidence",
             "Entities": {
               "amazon.fiter_sales": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Amazon",
-                    "ConceptualProperty": "fiter sales"
+                    "ConceptualProperty": "Top 5 City Sales/Units"
                   }
                 },
                 "State": "Generated",
@@ -1059,19 +1058,42 @@
             "lineageTag": "2eb64650-aff0-43fd-88fe-c3aa86c22749"
           },
           {
-            "name": "fiter sales",
+            "name": "Top 5 City Sales/Units",
             "expression": [
               "var _select_value = SELECTEDVALUE(select_value[value])",
-              "return if(_select_value = \"Sales\",[sale amount],[sale units])"
+              "",
+              "var _top_5_city = TOPN(5,SUMMARIZE(SELECTCOLUMNS(ALLSELECTED(Amazon),\"City\",Amazon[ship-city],\"Sales Amount\",[sale amount]),[City]),[sale amount],DESC)",
+              "",
+              "var _top_city = CALCULATE(IF(SELECTEDVALUE(select_value[value])==\"sales\",[sale amount],[sale units]),KEEPFILTERS(_top_5_city))",
+              "return _top_city"
             ],
             "formatString": "0",
             "lineageTag": "decebbde-db18-4561-bb9c-33baed545293"
           },
           {
             "name": "Total",
-            "expression": "CALCULATE([fiter sales],all('amazon-fashion - YT'[NewCategory]))",
+            "expression": "CALCULATE([Sales and units],all('amazon-fashion - YT'[NewCategory]))",
             "formatString": "0",
             "lineageTag": "741f8344-cd28-4277-93c2-2290b6214ace"
+          },
+          {
+            "name": "Top 5 State Sales/Units",
+            "expression": [
+              "var _select_value = SELECTEDVALUE(select_value[value])",
+              "",
+              "var _top_5_state = TOPN(5,SUMMARIZE(SELECTCOLUMNS(ALLSELECTED(Amazon),\"state\",Amazon[ship-state],\"Sales Amount\",[sale amount]),[state]),[sale amount],DESC)",
+              "",
+              "var _top_state = CALCULATE(IF(SELECTEDVALUE(select_value[value])==\"sales\",[sale amount],[sale units]),KEEPFILTERS(_top_5_state))",
+              "return _top_state"
+            ],
+            "formatString": "0",
+            "lineageTag": "dddd58b5-3af8-4248-9f41-d80dbd3731a5"
+          },
+          {
+            "name": "Sales and units",
+            "expression": "if(SELECTEDVALUE(select_value[value])==\"sales\",[sale amount],[sale units])",
+            "formatString": "0",
+            "lineageTag": "4883c4de-e652-4f52-aa18-021cab7b351d"
           }
         ],
         "partitions": [
@@ -1146,6 +1168,18 @@
           }
         ],
         "lineageTag": "57c630c4-c77e-4b0f-b578-009eb7d376b5",
+        "measures": [
+          {
+            "name": "Title_sales",
+            "expression": "CONCATENATE(SELECTEDVALUE(select_value[value]),\" By City\")",
+            "lineageTag": "e86851e5-38a4-4056-9688-757dafede3ea"
+          },
+          {
+            "name": "By_state",
+            "expression": "CONCATENATE(SELECTEDVALUE(select_value[value]),\" By State\")",
+            "lineageTag": "5102aaa6-7bb3-408f-b9e2-010080e19c8d"
+          }
+        ],
         "partitions": [
           {
             "name": "select_value",

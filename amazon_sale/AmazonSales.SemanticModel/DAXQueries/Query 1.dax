@@ -1,0 +1,8 @@
+define var _select_value = SELECTEDVALUE(select_value[value])
+
+var _top_5_city = TOPN(5,SUMMARIZE(SELECTCOLUMNS(Amazon,"City",Amazon[ship-city],"Sales Amount",[sale amount]),[City]," Total Sales",[sale amount]),[sale amount],DESC)
+
+var _top_city = CALCULATE([sale amount],KEEPFILTERS(_top_5_city))
+var _top_state = SUMX(TOPN(5,SUMMARIZE(SELECTCOLUMNS(Amazon,"State",Amazon[ship-state],"Sales Amount",[sale amount]),[State]," Total Sales",[sale amount]),[sale amount],DESC),[sale amount])
+
+EVALUATE _top_5_city
