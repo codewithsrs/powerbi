@@ -509,6 +509,21 @@
           }
         ],
         "lineageTag": "ec6d556c-2f93-49f7-9def-20a7db5bf3a2",
+        "measures": [
+          {
+            "name": "Top 5 Category By Sales/Units",
+            "expression": [
+              "var _select_value = SELECTEDVALUE(select_value[value])",
+              "",
+              "var _top_5_cat = TOPN(5,SUMMARIZE(SELECTCOLUMNS(ALLSELECTED('amazon-fashion - YT'),\"cat\",'amazon-fashion - YT'[NewCategory],\"Sales Amount\",[sale amount]),[cat]),[sale amount],DESC)",
+              "",
+              "var _top_cat = CALCULATE(IF(SELECTEDVALUE(select_value[value])==\"sales\",[sale amount],[sale units]),KEEPFILTERS(_top_5_cat))",
+              "return _top_cat"
+            ],
+            "formatString": "0",
+            "lineageTag": "02ccc4a4-2b8d-4fef-8ee2-592009adf77f"
+          }
+        ],
         "partitions": [
           {
             "name": "amazon-fashion - YT",
@@ -1115,9 +1130,10 @@
                 "    #\"Removed Columns\" = Table.RemoveColumns(#\"Renamed Columns\",{\"Column20\"}),",
                 "    #\"Added Custom\" = Table.AddColumn(#\"Removed Columns\", \"Total Amount\", each [Qty]*[Amount]),",
                 "    #\"Replaced Value\" = Table.ReplaceValue(#\"Added Custom\",null,\"\",Replacer.ReplaceValue,{\"Order ID\", \"Date\", \"Status\", \"Fulfilment\", \"Sales Channel \", \"ship-service-level\", \"Style\", \"SKU\", \"Category\", \"Size\", \"ASIN\", \"Courier Status\", \"Qty\", \"currency\", \"ship-city\", \"ship-state\", \"ship-postal-code\", \"ship-country\", \"fulfilled-by\", \"Amount\"}),",
-                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value\",{{\"Qty\", Int64.Type}, {\"Total Amount\", Int64.Type}, {\"Amount\", Int64.Type}, {\"Date\", type date}})",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value\",{{\"Qty\", Int64.Type}, {\"Total Amount\", Int64.Type}, {\"Amount\", Int64.Type}, {\"Date\", type date}}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Changed Type2\", each ([Amount] <> null and [Amount] <> 0))",
                 "in",
-                "    #\"Changed Type2\""
+                "    #\"Filtered Rows\""
               ],
               "type": "m"
             }

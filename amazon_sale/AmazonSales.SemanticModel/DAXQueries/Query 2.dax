@@ -1,31 +1,7 @@
-// DAX Query
-DEFINE
-	VAR __DS0FilterTable = 
-		TREATAS({"Boys Belts"}, 'amazon-fashion - YT'[NewCategory])
+define
+var _select_value = SELECTEDVALUE(select_value[value])
 
-	VAR __DS0FilterTable2 = 
-		TREATAS({"Sales"}, 'select_value'[value])
+var _top_5_cat = TOPN(5,SUMMARIZE(SELECTCOLUMNS(ALLSELECTED('amazon-fashion - YT'),"cat",'amazon-fashion - YT'[NewCategory],"Sales Amount",[sale amount]),[cat]),[sale amount],DESC)
 
-	VAR __DS0Core = 
-		SUMMARIZECOLUMNS(
-			'Amazon'[ship-city],
-			__DS0FilterTable,
-			__DS0FilterTable2,
-			"City_Based_Values", 'Amazon'[City Based Values]
-		)
-
-	VAR __DS0PrimaryWindowed = 
-		TOPN(1001, __DS0Core, [City_Based_Values], 0, 'Amazon'[ship-city], 1)
-
-EVALUATE
-	SUMMARIZECOLUMNS(
-		__DS0FilterTable,
-		__DS0FilterTable2,
-		"Title_sales", IGNORE('select_value'[Title_sales])
-	)
-
-EVALUATE
-	__DS0PrimaryWindowed
-
-ORDER BY
-	[City_Based_Values] DESC, 'Amazon'[ship-city]
+var _top_cat = CALCULATE(IF(SELECTEDVALUE(select_value[value])=="sales",[sale amount],[sale units]),KEEPFILTERS(_top_5_cat))
+EVALUATE _top_cat
